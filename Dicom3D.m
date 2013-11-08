@@ -1,7 +1,10 @@
+%% CLASS HEADER INFORMTION
 %By: QuocBao Vu
 %Created: Dec. 31, 2012
 %Modified: Dec. 31, 2012
 %Version: 3
+%
+%Description:
 %
 %The class is the driver for making mofication to dicom image stacks. The
 %modification that are allowed are changing the pixel spacing rotatin the
@@ -14,6 +17,8 @@
 %a directory and this can only support 512x512 images and maximum 512
 %number of slices when the image is isometric
 
+
+%% CLASS DEFINITION
 classdef Dicom3D < handle 
     properties
         directory;              %Main directory to load files from
@@ -37,6 +42,7 @@ classdef Dicom3D < handle
     end
     
     methods
+        %pre:  directory must be a string and a valid directory
         %post: Construct a Dicom3D object that repersents an dicom image
         %      stack with the nessacry header infromation to modify the
         %      volume with rotations, changing the pixel spacing, chaing
@@ -161,6 +167,8 @@ classdef Dicom3D < handle
             this.isometricVolume = isoVolume;      
         end
         
+        %pre:  outputDirectory and filename must be a string.
+        %      outputDirectory must exist
         %post: Writes the Volume to the file using the inputed output 
         %      directory and fileanem. If no filename is specified a 
         %      default filename "image" is assigned. The data is writen
@@ -322,6 +330,7 @@ classdef Dicom3D < handle
             nS = size(this.volume, 3);
         end
         
+        %pre:  index must be smaller than the 3rd dimension of the image
         %post: Returns the slice specified by the user input
         function slice = getSlice(this, index)
             if (index > size(this.volume, 3) || index < 1)
@@ -330,6 +339,8 @@ classdef Dicom3D < handle
             slice = this.volume(:,:,index);
         end
         
+        %pre:  sliceNumber must be greater than one and less than 3rd
+        %      dimension of the 3D image. (Index Out of Bounds error if not)
         %post: Returns the correct image number even when the image is
         %      inverted
         function imageNumber = getTrueImageNumber(this, sliceNumber)

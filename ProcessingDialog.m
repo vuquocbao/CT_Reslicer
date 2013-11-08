@@ -1,3 +1,4 @@
+%% CLASS HEADER INFORMATION
 %By: QuocBao Vu
 %Created: Dec, 28, 2012
 %Modified: Dec. 28, 2012
@@ -8,6 +9,7 @@
 %the process to be finish. Once the process is finish the dialog window
 %will be closed.
 
+%% CLASS DEFINITION
 classdef ProcessingDialog < handle
     
     properties
@@ -58,3 +60,4 @@ classdef ProcessingDialog < handle
     end
 end
 
+%% END CLASS DEFINITION

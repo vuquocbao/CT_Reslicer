@@ -1,3 +1,4 @@
+%% CLASS HEADER INFORMATION
 %By: QuocBao Vu
 %Created: Dec. 17, 2012
 %Updated: Dec. 17, 2012
@@ -6,6 +7,8 @@
 %This is the controller class for the DicomViewer. It handles all the
 %actions done by the user to the control and updates the model and view
 %depending on the button that was pressed.
+
+%% CLASS DEFINITION
 classdef DicomViewerController < handle
     %UNTITLED Summary of this class goes here
     %   Detailed explanation goes here
@@ -881,4 +884,5 @@ classdef DicomViewerController < handle
     end
     
 end
+%% END DEFINITION
 

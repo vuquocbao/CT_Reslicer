@@ -1,3 +1,4 @@
+%% CLASS HEADER INFORMATION
 %By: QuocBao Vu
 %Created: Dec. 20th, 2012
 %Last Modifed; Dec. 20th, 2012
@@ -9,7 +10,7 @@
 %updates occur when the user press a control that modifies the model in
 %turn updating what the view displays
 
-
+%% CLASS DEFINITION
 classdef DicomViewerView < handle
     %DICOMVIEWERVIEW Summary of this class goes here
     %   Detailed explanation goes here
@@ -197,4 +198,4 @@ classdef DicomViewerView < handle
         end      
     end    
 end
-
+%% END DEFINITION

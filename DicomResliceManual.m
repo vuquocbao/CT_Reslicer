@@ -1,9 +1,10 @@
+%% HEADER INFORMATION
 %By: QuocBao Vu
 %Created: Dec. 31, 2012
 %Modified: Dec. 31, 2012
 %Version: 1
 %
-%The program reslices dicom image stack maunal by having the user typing
+%The program reslices dicom image stack maunally by having the user typing
 %out the commands in the script before running. First a Dicom3D object is
 %create from the input directory to repersent the data. The user then can
 %make the changes to the image by programming the commands in the scrips.
@@ -70,6 +71,8 @@
 %       directory with the specified filename. Note that a filename does 
 %       not need to be specified. If no filename is specified the default
 %       filename is "image".
+%% EXECUTION CODE
+
 clear all
 close all
 clc
@@ -101,3 +104,5 @@ if (~exist(outputDirectory, 'dir'))
     mkdir(outputDirectory);
 end
 imageStack.write(outputDirectory);
+
+%% END PROGRAM

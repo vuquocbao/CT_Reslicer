@@ -1,3 +1,4 @@
+%% CLASS HEADER INFORMATION
 %By: QuocBao Vu
 %Created: Dec. 20th, 2012
 %Last Modified: Dec. 20th, 2012
@@ -9,6 +10,7 @@
 %controller will tell the model what do with the data and the that data
 %will be processed in this class
 
+%% CLASS DEFINITION
 classdef DicomViewerModel < handle
     
     properties (Access = public)
@@ -476,4 +478,6 @@ classdef DicomViewerModel < handle
     end
    
 end
+%% END DEFINITION
+
 

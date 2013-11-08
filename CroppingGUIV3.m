@@ -1,3 +1,4 @@
+%% CLASS DESCRIPTION
 %By: QuocBao Vu
 %Created: Dec. 20th, 2012
 %Modified: Dec. 20th, 2012
@@ -8,7 +9,7 @@
 %has the ability to scroll thru the whole stack to find the be position to
 %crop the image stack. A pre define 512x512 box defines the cropping region
 
-
+%% CLASS DEFINITION
 classdef CroppingGUIV3 < handle
     %CROPPINGGUIV3 Summary of this class goes here
     %   Detailed explanation goes here
@@ -154,3 +155,4 @@ classdef CroppingGUIV3 < handle
     
 end
 
+%% END CLASS DEFINITION
